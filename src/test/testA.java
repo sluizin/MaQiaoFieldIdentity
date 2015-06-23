@@ -9,10 +9,11 @@ import MaQiao.Constants.Constants;
 
 public class testA {
 	private static final Unsafe UNSAFE = Constants.UNSAFE;
-	private int a=15;
+	private int mine_Int=15;
 	@Test
 	public void test() {
 		A a = new A();
+		System.out.println("mine_Int   ="+System.identityHashCode(mine_Int));
 		System.out.println(a.toString());
 		final Field[] fields = a.getClass().getDeclaredFields();
 		try {
